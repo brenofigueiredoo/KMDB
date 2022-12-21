@@ -13,5 +13,4 @@ class Movie(models.Model):
     user = models.ForeignKey(
         "users.User", on_delete=models.CASCADE, related_name="movies"
     )
-
     genres = models.ManyToManyField("genres.Genre", related_name="movies")
